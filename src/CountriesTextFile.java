@@ -3,7 +3,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,7 +15,6 @@ public class CountriesTextFile {
 			Files.createFile(filePath);
 		}
 
-		
 		List<String> countryList = Arrays.asList(country.toString());
 
 		Files.write(filePath, countryList, StandardOpenOption.APPEND);
@@ -24,9 +22,9 @@ public class CountriesTextFile {
 
 	public static void readFile() throws IOException {
 		List<String> lines = Files.readAllLines(filePath);
-		List<Country> countries = new ArrayList<>();
+
 		for (String thisLine : lines) {
 			System.out.println(thisLine);
 		}
-}
+	}
 }

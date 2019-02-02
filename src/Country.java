@@ -1,5 +1,6 @@
 
 public class Country {
+
 	private String name;
 	private int population;
 
@@ -31,7 +32,7 @@ public class Country {
 
 	@Override
 	public String toString() {
-		return "Country [name=" + name + ", population=" + population + "]";
+		return name + "," + population;
 	}
 
 }
