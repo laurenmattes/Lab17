@@ -8,6 +8,7 @@ public class CountriesApp {
 
 		int menuChoice;
 		String name;
+		String name2;
 		int population;
 		String userContinue = "y";
 
@@ -17,7 +18,7 @@ public class CountriesApp {
 
 		while (userContinue.equalsIgnoreCase("y")) {
 
-			System.out.println("1 - See the lost of countries");
+			System.out.println("1 - See the list of countries");
 			System.out.println("2 - Add a new country.");
 			System.out.println("3 - Exit");
 
@@ -30,11 +31,15 @@ public class CountriesApp {
 				// add new country
 
 				System.out.println("Enter Country: ");
-				name = scnr.nextLine();
 				scnr.nextLine();
+				name = scnr.nextLine();
 
 				System.out.println("Enter population: ");
 				population = scnr.nextInt();
+				/*
+				 * good way to test System.out.println("name=" + name);
+				 * System.out.println("pop=" + population);
+				 */
 
 				Country c1 = new Country(name, population);
 				CountriesTextFile.appendToFile(c1);
